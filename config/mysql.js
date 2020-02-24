@@ -3,14 +3,22 @@
 const SEQUELIZE = require('sequelize');
 const CHALK     = require('chalk');
 
-const CONNECTION = new SEQUELIZE('payment_service', null, null, {
+const CONNECTION = new SEQUELIZE(process.env.DATABASE_NAME, null, null, {
   dialect: 'mysql',
   port: 3306,
   replication: {
     read: [
-      { host: 'localhost', username: 'root', password: 'Ebutor@123' }
+      { 
+        host: process.env.DATABASE_HOSTNAME,
+        username: process.env.DATABASE_USERNAME,
+        password: process.env.DATABASE_PASSWORD
+      }
     ],
-    write: { host: 'localhost', username: 'root', password: 'Ebutor@123' }
+    write: { 
+        host: process.env.DATABASE_HOSTNAME,
+        username: process.env.DATABASE_USERNAME,
+        password: process.env.DATABASE_PASSWORD
+      }
   },
   pool: {
     maxConnections: 20,
