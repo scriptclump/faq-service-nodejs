@@ -14,6 +14,10 @@ const  ENV      = process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 require('./config/express')(APP)
 require('./config/mysql')
 
+// Routes
+var routes = require('./route/faq')(APP)
+routes(APP); //register the route
+
 
 // Starting the server
 const SERVER_PORT   = process.env.PORT
