@@ -12,12 +12,10 @@
   },
   "keywords": [
     "NodeJS",
-    "CRUD",
-    "app",
-    "Sequalise",
+    "CRUD App",
+    "Sequelize",
     "MySQL",
-    "Connection",
-    "Pool"
+    "Connection Pool"
   ],
   "author": "Basant Kumar Sharma",
   "license": "ISC",
@@ -28,9 +26,13 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "chalk": "^3.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "figlet": "^1.3.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.5"
   },
   "devDependencies": {
     "pm2": "^4.2.3"
